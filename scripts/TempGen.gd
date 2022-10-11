@@ -1,9 +1,13 @@
 extends TileMap
 
-export var world_x = 10
-export var world_y = 10
+export (int) var world_x = 10
+export (int) var world_y = 10
+
+var snap_x = 16
+var snap_y = 16
 
 
+# WORLD ELEVATION GENERATION ---------------------------------------------
 func gen_base():
 	for x in world_x:
 		for y in world_y:
@@ -12,5 +16,5 @@ func gen_base():
 			update_bitmask_area(Vector2(x, y))
 
 
-func ready() -> void:
+func _ready() -> void:
 	gen_base()
