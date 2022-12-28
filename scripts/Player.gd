@@ -94,5 +94,6 @@ func _physics_process(delta):
 		to_spawn()
 
 
+# SIGNALS ----------------------------------------------------------------
 func _on_CoyoteTimer_timeout():
 	coy_time = false
